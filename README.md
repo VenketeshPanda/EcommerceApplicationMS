@@ -1,5 +1,5 @@
 # Ecommerce Application Microservice 
-This is collection of all the microservices I built for an Ecommerce application
+Here is the collection of all the microservices I built for an Ecommerce application and their description.
 
 
 **Product service:** 
@@ -8,14 +8,15 @@ This is collection of all the microservices I built for an Ecommerce application
 - Used Flyway for all the schema migrations.
 - It acts as a Client LB for User service for the request that has to go through the product service.
 - Configured Prometheus for all the metrics visualization.
-- Added Dockerfile to containerize and deploy the application quickly. 
+- Added Dockerfile to containerize and deploy the application quickly.
+- Acts as a resource server of OAuth2. 
 - Link to the repository: https://github.com/VenketeshPanda/ProductService
 
 
 **User service:** 
 - This service acts as the user base of the project. 
 - All the signup, login and logout functionalities are implemented here.
-- I have used Spring Security and implemented OAuth2 for authenticating the users.
+- I have used Spring Security and implemented OAuth2 for authenticating the users. Acts as the authorization server for OAuth2.
 - Also acts as a producer to trigger an event to send email notification whenever a new user signs up.
 - Link to the repository: https://github.com/VenketeshPanda/UserService
 
@@ -31,3 +32,5 @@ This is collection of all the microservices I built for an Ecommerce application
 - This acts as a service discovery.
 - This service maps all the available instances of the registered services, which our API gateway can use to redirect the requests and balance the load.
 - Link to the repository: https://github.com/VenketeshPanda/EurekaServer
+
+Also, deployed the application on AWS using Elastic BeanStalk and used RDS for storing the data. Understood the role of Route 53 for DNS, EC2 for on demand auto scaling.  
